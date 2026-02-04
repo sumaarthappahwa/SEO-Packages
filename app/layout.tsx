@@ -3,24 +3,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Do Digital Marketing | Specialized SEO, AEO & GEO Packages for SMEs',
-  description: 'High-performance SEO, AO, and GO packages for SMEs, manufacturers, and exporters. Boost local and global visibility with tailored marketing strategies.',
-  keywords: 'SEO Packages for SMEs, Manufacturing SEO, Exporter Marketing, Local Business SEO, AEO Services, GEO Strategy, Do Digital Marketing',
-  openGraph: {
-    title: 'Do Digital Marketing | Professional SEO, AO & GO Packages',
-    description: 'Dominate search results with specialized packages for Manufacturers and Exporters.',
-    url: 'https://www.dodigital.marketing',
-    siteName: 'Do Digital Marketing',
-    images: [
-      {
-        url: 'https://www.dodigital.marketing/images/home/dodigital.marketing-logo.png',
-        width: 800,
-        height: 600,
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
+  title: 'Do Digital Marketing | Precision SEO, AEO & GEO for Manufacturers & SMEs',
+  description: 'Specialized SEO packages for manufacturers, exporters, and local businesses. Dominate search with Answer Engine & Generative Optimization.',
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({
@@ -53,7 +38,7 @@ export default function RootLayout({
           `
         }} />
       </head>
-      <body className="bg-slate-50 text-slate-900 antialiased">
+      <body className="bg-slate-50 text-slate-900 antialiased selection:bg-brand/10 selection:text-brand-dark">
         {children}
       </body>
     </html>

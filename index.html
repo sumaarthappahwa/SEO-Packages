@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do Digital Marketing</title>
-<script type="importmap">
+    <title>Do Digital Marketing | Precision SEO, AEO & GEO for Manufacturers & SMEs</title>
+    <meta name="description" content="Specialized SEO packages for manufacturers, exporters, and local businesses. Dominate search with Answer Engine & Generative Optimization.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Do Digital Marketing | Professional SEO, AO & GO Packages">
+    <meta property="og:description" content="Dominate search results with specialized packages for Manufacturers and Exporters.">
+    <meta property="og:image" content="https://www.dodigital.marketing/images/home/dodigital.marketing-logo.png">
+
+    <!-- Styles & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                DEFAULT: '#23a39a',
+                light: '#e9f6f5',
+                dark: '#1c827b',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+    </style>
+
+    <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "@google/genai": "https://esm.sh/@google/genai",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
     "react/": "https://esm.sh/react@^19.2.4/",
     "next": "https://esm.sh/next@^16.1.6"
@@ -15,7 +50,16 @@
 }
 </script>
 </head>
-<body>
-    <div id="root"></div>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand/10 selection:text-brand-dark">
+    <div id="root">
+        <!-- Static Shell: This content is visible immediately before React hydrates -->
+        <div class="min-h-screen flex items-center justify-center bg-white">
+            <div class="text-center animate-pulse">
+                <img src="https://www.dodigital.marketing/images/home/dodigital.marketing-logo.png" alt="Do Digital Marketing" class="h-12 mx-auto mb-4 opacity-50">
+                <p class="text-slate-400 font-medium">Loading Excellence...</p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>

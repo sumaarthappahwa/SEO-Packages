@@ -10,14 +10,14 @@ import TestimonialsSection from '../components/TestimonialsSection';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col selection:bg-brand-light selection:text-brand-dark">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
         <Hero />
         <section id="audience" className="scroll-mt-20">
           <AudienceSection />
         </section>
-        <section id="packages" className="scroll-mt-20 bg-white">
+        <section id="packages" className="scroll-mt-20">
           <PricingSection />
         </section>
         <TestimonialsSection />
