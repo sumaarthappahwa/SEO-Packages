@@ -1,3 +1,4 @@
+'use client';
 
 import React from 'react';
 
@@ -7,7 +8,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <a href="https://www.dodigital.marketing" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <img 
                 src="https://www.dodigital.marketing/images/home/dodigital.marketing-logo.png" 
                 alt="Do Digital Marketing" 
@@ -22,13 +23,6 @@ const Navbar: React.FC = () => {
             <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-brand transition-colors">FAQs</a>
             <button className="bg-brand text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-brand-dark transition-all shadow-md shadow-brand/10 active:scale-95">
               Get Started
-            </button>
-          </div>
-          <div className="md:hidden">
-            <button className="p-2 rounded-md text-slate-600">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
             </button>
           </div>
         </div>
