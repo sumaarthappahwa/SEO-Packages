@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { SEO_PACKAGES } from '../constants';
 import { SEOPackage } from '../types';
@@ -27,13 +26,13 @@ const AnimatedCounter: React.FC<{ value: number; trigger: boolean }> = ({ value,
     }
 
     let startTimestamp: number | null = null;
-    const duration = 1200; // Faster, snappier duration
+    const duration = 1500;
 
     const step = (timestamp: number) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       
-      // Use easing for a smoother feel: easeOutExpo
+      // Easing function
       const easedProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
       
       const currentCount = Math.floor(easedProgress * value);
@@ -82,9 +81,9 @@ const PricingSection: React.FC = () => {
     <div className="py-24" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl mb-4">Specialized SEO Packages</h2>
+          <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl mb-4">Precision SEO Packages</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Choose the package that aligns with your current growth stage and future global ambitions.
+            Tailored solutions for local businesses, manufacturing giants, and global exporters.
           </p>
         </div>
 
@@ -92,15 +91,15 @@ const PricingSection: React.FC = () => {
           {SEO_PACKAGES.map((pkg) => (
             <div 
               key={pkg.id} 
-              className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-500 ${
+              className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-500 hover:shadow-xl ${
                 pkg.featured 
-                  ? 'bg-white border-brand shadow-2xl shadow-brand/10 scale-105 z-10' 
+                  ? 'bg-white border-brand shadow-2xl shadow-brand/10 md:scale-105 z-10' 
                   : 'bg-slate-50 border-slate-100'
               }`}
             >
               {pkg.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-brand text-white text-xs font-bold uppercase tracking-widest rounded-full whitespace-nowrap">
-                  Recommended for Pro Businesses
+                  Most Popular for Pro Businesses
                 </div>
               )}
               
@@ -117,50 +116,41 @@ const PricingSection: React.FC = () => {
               </div>
 
               <div className="space-y-4 flex-grow">
-                <FeatureItem label="ONPAGE Optimization" active={pkg.onpageOptimization} />
-                <FeatureItem label="OFF-PAGE Optimization" active={pkg.offpageOptimization} />
-                <FeatureItem label="GBP Optimization" active={pkg.gbpOptimization} />
+                <FeatureItem label="Google Business Profile Optimization" active={pkg.gbpOptimization} />
                 <FeatureItem label={pkg.productPagesSEO} active={true} />
                 <FeatureItem label="Keywords Optimization" active={pkg.keywordOptimization} />
                 <FeatureItem label={pkg.newPages} active={pkg.newPages !== 'No New Pages'} />
                 <FeatureItem label={pkg.blogPosts} active={pkg.blogPosts !== 'No blog posts'} />
-                <FeatureItem 
-                  label={pkg.youtubeOptimization > 0 ? `${pkg.youtubeOptimization} YouTube Video Optimization` : 'No YouTube Video Optimization'} 
-                  active={pkg.youtubeOptimization > 0} 
-                />
+                <FeatureItem label="Finding Trends Analysis" active={pkg.trendFinding} />
+                <FeatureItem label={`Target ${pkg.locations} Location${pkg.locations > 1 ? 's' : ''}`} active={true} />
                 
                 <div className="pt-4 border-t border-slate-200">
-                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Link Building & Growth</p>
-                  <div className="space-y-3">
-                    <div className={`flex items-start gap-3 text-sm ${pkg.citationBuilding > 0 ? 'text-slate-700' : 'text-slate-400'}`}>
-                      {pkg.citationBuilding > 0 ? <CheckIcon /> : <CloseIcon />}
-                      <span className="flex items-center gap-1.5">
-                        <AnimatedCounter value={pkg.citationBuilding} trigger={isVisible} /> Citation Building
-                      </span>
-                    </div>
-                    <div className={`flex items-start gap-3 text-sm ${pkg.guestPosts > 0 ? 'text-slate-700' : 'text-slate-400'}`}>
-                      {pkg.guestPosts > 0 ? <CheckIcon /> : <CloseIcon />}
-                      <span className="flex items-center gap-1.5">
-                        <AnimatedCounter value={pkg.guestPosts} trigger={isVisible} /> Guest Post{pkg.guestPosts !== 1 ? 's' : ''}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-slate-200">
-                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Strategy Includes</p>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Optimization Stack</p>
                   <div className="flex flex-wrap gap-2">
                     {pkg.strategy.map((s) => (
-                      <span key={s} className="px-2 py-1 bg-brand-light text-brand-dark text-[10px] font-bold rounded uppercase">
+                      <span key={s} className="px-3 py-1 bg-brand-light text-brand-dark text-xs font-bold rounded-full border border-brand/10">
                         {s}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                <div className="pt-4">
-                  <FeatureItem label="Trend Finding Analysis" active={pkg.trendFinding} />
-                  <FeatureItem label={`Target ${pkg.locations} ${pkg.locations > 1 ? 'Locations' : 'Location'}`} active={true} />
+                <div className="pt-4 border-t border-slate-200">
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Monthly Link Building</p>
+                  <div className="space-y-3">
+                    <div className={`flex items-start gap-3 text-sm ${pkg.citationBuilding > 0 ? 'text-slate-700' : 'text-slate-400'}`}>
+                      {pkg.citationBuilding > 0 ? <CheckIcon /> : <CloseIcon />}
+                      <span className="flex items-center gap-1.5">
+                        <AnimatedCounter value={pkg.citationBuilding} trigger={isVisible} /> Citation Building Links
+                      </span>
+                    </div>
+                    <div className={`flex items-start gap-3 text-sm ${pkg.guestPosts > 0 ? 'text-slate-700' : 'text-slate-400'}`}>
+                      {pkg.guestPosts > 0 ? <CheckIcon /> : <CloseIcon />}
+                      <span className="flex items-center gap-1.5">
+                        <AnimatedCounter value={pkg.guestPosts} trigger={isVisible} /> High-Authority Guest Posts
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -172,7 +162,7 @@ const PricingSection: React.FC = () => {
                   className={`block w-full text-center py-4 px-6 rounded-xl font-bold transition-all ${
                     pkg.featured 
                       ? 'bg-brand text-white hover:bg-brand-dark shadow-lg shadow-brand/20 hover:-translate-y-0.5 active:scale-95' 
-                      : 'bg-brand-light text-brand-dark border border-brand/10 hover:bg-brand/10 hover:-translate-y-0.5 active:scale-95'
+                      : 'bg-brand-light text-brand-dark border border-brand/10 hover:bg-brand/20 hover:-translate-y-0.5 active:scale-95'
                   }`}
                 >
                   Buy Package Now
@@ -192,7 +182,7 @@ interface FeatureItemProps {
 }
 
 const FeatureItem: React.FC<FeatureItemProps> = ({ label, active }) => (
-  <div className={`flex items-start gap-3 text-sm ${active ? 'text-slate-700' : 'text-slate-400'}`}>
+  <div className={`flex items-start gap-3 text-sm ${active ? 'text-slate-700' : 'text-slate-400 italic'}`}>
     {active ? <CheckIcon /> : <CloseIcon />}
     <span>{label}</span>
   </div>

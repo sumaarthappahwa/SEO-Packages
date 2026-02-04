@@ -1,18 +1,17 @@
-
 import { SEOPackage } from './types';
 
 export const SEO_PACKAGES: SEOPackage[] = [
   {
     id: 'growing',
     name: 'Growth Catalyst',
-    tagline: 'Perfect for growing businesses and local startups.',
+    tagline: 'Suitable for growing businesses and local startups.',
     price: '₹15,000',
     paymentUrl: 'https://rzp.io/rzp/DCnEGvRg',
-    targetAudience: 'Growing Businesses',
+    targetAudience: 'Growing Business',
     gbpOptimization: true,
-    productPagesSEO: '10+ Product Pages',
+    productPagesSEO: '10+ Product Pages SEO Optimization',
     keywordOptimization: true,
-    newPages: 'No New Pages',
+    newPages: 'New pages as per requirements',
     blogPosts: 'No blog posts',
     youtubeOptimization: 0,
     strategy: ['SEO'],
@@ -26,17 +25,17 @@ export const SEO_PACKAGES: SEOPackage[] = [
   {
     id: 'pro',
     name: 'Pro Accelerator',
-    tagline: 'Designed for manufacturers and pro businesses scaling up.',
+    tagline: 'Suitable for pro businesses, manufacturers and exporters.',
     price: '₹25,000',
     paymentUrl: 'https://rzp.io/rzp/mlPnhSSM',
-    targetAudience: 'Pro Businesses',
+    targetAudience: 'Pro Business',
     gbpOptimization: true,
-    productPagesSEO: '10+ Product Pages',
+    productPagesSEO: '10+ Product Pages SEO Optimization',
     keywordOptimization: true,
-    newPages: '10 New Pages',
+    newPages: '10 New Pages Creation',
     blogPosts: '4 Blog Posts per month',
     youtubeOptimization: 4,
-    strategy: ['SEO', 'AEO', 'GEO'],
+    strategy: ['SEO', 'AO', 'GO'],
     trendFinding: true,
     locations: 3,
     onpageOptimization: true,
@@ -48,17 +47,17 @@ export const SEO_PACKAGES: SEOPackage[] = [
   {
     id: 'enterprise',
     name: 'Enterprise Authority',
-    tagline: 'Comprehensive solutions for large-scale manufacturers and global exporters.',
+    tagline: 'Enterprise solutions for global reach and dominance.',
     price: '₹55,000',
     paymentUrl: 'https://rzp.io/rzp/8wmC8VK3',
     targetAudience: 'Enterprise Solutions',
     gbpOptimization: true,
-    productPagesSEO: '10+ Product Pages',
+    productPagesSEO: '10+ Product Pages SEO Optimization',
     keywordOptimization: true,
-    newPages: 'Up to 20 New Pages',
+    newPages: 'Up to 20 New Pages Creation',
     blogPosts: 'Up to 8 Blog Posts',
     youtubeOptimization: 8,
-    strategy: ['SEO', 'AEO', 'GEO'],
+    strategy: ['SEO', 'AO', 'GO'],
     trendFinding: true,
     locations: 6,
     onpageOptimization: true,
@@ -71,17 +70,17 @@ export const SEO_PACKAGES: SEOPackage[] = [
 export const TARGET_AUDIENCES = [
   {
     title: 'SMEs',
-    description: 'Boost your local visibility and compete with larger corporations through targeted local SEO.',
+    description: 'Empowering small and medium enterprises with local visibility and high-intent keyword optimization.',
     icon: '🏢'
   },
   {
     title: 'Manufacturers',
-    description: 'Optimization specifically for B2B product catalogs, technical documentation, and bulk-buyer intent.',
+    description: 'Technical SEO and product page optimization designed for manufacturing catalogs and B2B buyers.',
     icon: '🏭'
   },
   {
     title: 'Exporters',
-    description: 'Global reach through AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) across multiple countries.',
+    description: 'Scaling your business to 3 or 6 locations internationally with AO (Answer Optimization) and GO (Generative Optimization).',
     icon: '🚢'
   }
 ];
