@@ -11,10 +11,12 @@
     <meta property="og:description" content="Dominate search results with specialized packages for Manufacturers and Exporters.">
     <meta property="og:image" content="https://www.dodigital.marketing/images/home/dodigital.marketing-logo.png">
 
-    <!-- Styles & Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -31,9 +33,23 @@
         }
       }
     </script>
+    
     <style>
-      body { font-family: 'Inter', sans-serif; }
+      @layer base {
+        body { 
+          font-family: 'Inter', sans-serif;
+          background-color: #f8fafc; /* bg-slate-50 */
+          color: #0f172a; /* text-slate-900 */
+          -webkit-font-smoothing: antialiased;
+        }
+      }
       .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+      .pricing-card-featured {
+        border: 2px solid #23a39a;
+        box-shadow: 0 25px 50px -12px rgba(35, 163, 154, 0.25);
+      }
+      /* Ensure smooth transitions */
+      .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
     </style>
 
     <script type="importmap">
@@ -44,20 +60,25 @@
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "@google/genai": "https://esm.sh/@google/genai",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "next": "https://esm.sh/next@^16.1.6"
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand/10 selection:text-brand-dark">
+<body class="selection:bg-brand/10 selection:text-brand-dark">
     <div id="root">
-        <!-- Static Shell: This content is visible immediately before React hydrates -->
-        <div class="min-h-screen flex items-center justify-center bg-white">
-            <div class="text-center animate-pulse">
-                <img src="https://www.dodigital.marketing/images/home/dodigital.marketing-logo.png" alt="Do Digital Marketing" class="h-12 mx-auto mb-4 opacity-50">
-                <p class="text-slate-400 font-medium">Loading Excellence...</p>
+        <!-- High-quality shell to avoid white screen during JS load -->
+        <div class="min-h-screen flex flex-col items-center justify-center bg-white">
+            <img src="https://www.dodigital.marketing/images/home/dodigital.marketing-logo.png" alt="Logo" class="h-12 w-auto mb-4 animate-pulse opacity-50">
+            <div class="h-1 w-48 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-brand animate-[loading_1.5s_ease-in-out_infinite]"></div>
             </div>
+            <style>
+              @keyframes loading {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+              }
+            </style>
         </div>
     </div>
     <script type="module" src="./index.tsx"></script>
