@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from '../components/Navbar.tsx';
-import Hero from '../components/Hero.tsx';
-import AudienceSection from '../components/AudienceSection.tsx';
-import PricingSection from '../components/PricingSection.tsx';
-import FAQSection from '../components/FAQSection.tsx';
-import Footer from '../components/Footer.tsx';
-import WhatsAppButton from '../components/WhatsAppButton.tsx';
-import TestimonialsSection from '../components/TestimonialsSection.tsx';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import AudienceSection from '../components/AudienceSection';
+import PricingSection from '../components/PricingSection';
+import FAQSection from '../components/FAQSection';
+import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
+import TestimonialsSection from '../components/TestimonialsSection';
 
 export default function Home() {
   return (

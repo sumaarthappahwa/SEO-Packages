@@ -24,12 +24,17 @@ const Hero: React.FC = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-          <a href="#packages" className="w-full sm:w-auto px-10 py-5 bg-brand text-white font-bold rounded-2xl shadow-2xl shadow-brand/30 hover:bg-brand-dark hover:-translate-y-1 transition-all text-lg">
+          <a href="#packages" className="w-full sm:w-auto px-10 py-5 bg-brand text-white font-bold rounded-2xl shadow-2xl shadow-brand/30 hover:bg-brand-dark hover:-translate-y-1 transition-all text-lg text-center">
             Compare SEO Packages
           </a>
-          <button className="w-full sm:w-auto px-10 py-5 bg-white text-slate-900 font-bold rounded-2xl border border-slate-200 hover:bg-slate-50 hover:border-slate-300 transition-all text-lg">
+          <a 
+            href="https://digital-marketing-consultancy.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-10 py-5 bg-white text-slate-900 font-bold rounded-2xl border border-slate-200 hover:bg-slate-50 hover:border-slate-300 transition-all text-lg text-center"
+          >
             Book a Strategy Call
-          </button>
+          </a>
         </div>
         
         <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-y border-slate-100/80">

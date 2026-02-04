@@ -38,8 +38,8 @@
       @layer base {
         body { 
           font-family: 'Inter', sans-serif;
-          background-color: #f8fafc; /* bg-slate-50 */
-          color: #0f172a; /* text-slate-900 */
+          background-color: #f8fafc;
+          color: #0f172a;
           -webkit-font-smoothing: antialiased;
         }
       }
@@ -48,7 +48,6 @@
         border: 2px solid #23a39a;
         box-shadow: 0 25px 50px -12px rgba(35, 163, 154, 0.25);
       }
-      /* Ensure smooth transitions */
       .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
     </style>
 
@@ -58,7 +57,6 @@
     "react": "https://esm.sh/react@19.0.0",
     "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-    "@google/genai": "https://esm.sh/@google/genai",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
     "react/": "https://esm.sh/react@^19.2.4/"
   }
@@ -67,7 +65,6 @@
 </head>
 <body class="selection:bg-brand/10 selection:text-brand-dark">
     <div id="root">
-        <!-- High-quality shell to avoid white screen during JS load -->
         <div class="min-h-screen flex flex-col items-center justify-center bg-white">
             <img src="https://www.dodigital.marketing/images/home/dodigital.marketing-logo.png" alt="Logo" class="h-12 w-auto mb-4 animate-pulse opacity-50">
             <div class="h-1 w-48 bg-slate-100 rounded-full overflow-hidden">
