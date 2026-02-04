@@ -35,7 +35,7 @@ export const SEO_PACKAGES: SEOPackage[] = [
     newPages: '10 New Pages Creation',
     blogPosts: '4 Blog Posts per month',
     youtubeOptimization: 4,
-    strategy: ['SEO', 'AO', 'GO'],
+    strategy: ['SEO', 'AEO', 'GEO'],
     trendFinding: true,
     locations: 3,
     onpageOptimization: true,
@@ -57,7 +57,7 @@ export const SEO_PACKAGES: SEOPackage[] = [
     newPages: 'Up to 20 New Pages Creation',
     blogPosts: 'Up to 8 Blog Posts',
     youtubeOptimization: 8,
-    strategy: ['SEO', 'AO', 'GO'],
+    strategy: ['SEO', 'AEO', 'GEO'],
     trendFinding: true,
     locations: 6,
     onpageOptimization: true,
@@ -80,7 +80,7 @@ export const TARGET_AUDIENCES = [
   },
   {
     title: 'Exporters',
-    description: 'Scaling your business to 3 or 6 locations internationally with AO (Answer Optimization) and GO (Generative Optimization).',
+    description: 'Scaling your business to 3 or 6 locations internationally with AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization).',
     icon: '🚢'
   }
 ];
